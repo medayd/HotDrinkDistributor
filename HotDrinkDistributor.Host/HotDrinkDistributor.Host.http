@@ -1,0 +1,6 @@
+@HotDrinkDistributor.Host_HostAddress = http://localhost:5102
+
+GET {{HotDrinkDistributor.Host_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
