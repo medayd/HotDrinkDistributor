@@ -69,7 +69,7 @@ namespace HotDrinkDistributor.Application.Services
 
         public IEnumerable<RecipeDto> GetAllRecipes()
         {
-            return _hotDrinkRepository.GetAllRecipes().Select(RecipeExtensions.ToDtoRecipe);
+            return _hotDrinkRepository.GetAllRecipes().Select(RecipeExtensions.ToDtoRecipe).Select(CalculateRecipePrice);
         }
 
         private RecipeDto CalculateRecipePrice(RecipeDto recipe)
